@@ -1,0 +1,1897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">14</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">14</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">14</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="SaleOrderId" id="15">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportId" id="16">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyName" id="45">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyAddress" id="46">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyWebsite" id="47">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyPhone" id="48">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyFax" id="49">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyEmail" id="50">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="13">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@10.30.1.36:1521:vtdbtest</property>
+            <property name="odaUser">ERP</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Q3Zzc3NxWEFjcXhxdw==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="14">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">V_OUT</property>
+                    <property name="nativeName">V_OUT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-10</property>
+                    <property name="position">1</property>
+                    <property name="allowNull">true</property>
+                    <property name="isOutput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">V_SALEORDERID</property>
+                    <property name="paramName">SaleOrderId</property>
+                    <property name="nativeName">V_SALEORDERID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">V_REPORTID</property>
+                    <property name="paramName">ReportId</property>
+                    <property name="nativeName">V_REPORTID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">SALEORDERID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">DELIVERYTYPENAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">STORENAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">STOREPHONENUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CUSTOMERPHONE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">CUSTOMERADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">DELIVERYADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">STT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">PRODUCTID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">PRODUCTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">QUANTITY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">SALEPRICE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">TOTALPRICE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">NOTE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">TOTALAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">TOTALAMOUNTSTRING</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">TOTALFEE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">TOTALPAID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">TOTALADVANCE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">DISCOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">STAFFUSERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">CASHIERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">CREATEDUSERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">SHIPPINGCOST</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">INSTALLPRODUCTID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">INSTALLPRODUCTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">INSTALLIMEI</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">INSTALLUSER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">INSTALLUSERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">CONTENT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">DELIVERYDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">CREATEDDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">34</property>
+                        <property name="name">PRINTTIMES</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">35</property>
+                        <property name="name">PRINTDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">SALEORDERID</property>
+                    <property name="nativeName">SALEORDERID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">DELIVERYTYPENAME</property>
+                    <property name="nativeName">DELIVERYTYPENAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">STORENAME</property>
+                    <property name="nativeName">STORENAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">STOREPHONENUMBER</property>
+                    <property name="nativeName">STOREPHONENUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">CUSTOMERPHONE</property>
+                    <property name="nativeName">CUSTOMERPHONE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">CUSTOMERADDRESS</property>
+                    <property name="nativeName">CUSTOMERADDRESS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">DELIVERYADDRESS</property>
+                    <property name="nativeName">DELIVERYADDRESS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">STT</property>
+                    <property name="nativeName">STT</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">PRODUCTID</property>
+                    <property name="nativeName">PRODUCTID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">PRODUCTNAME</property>
+                    <property name="nativeName">PRODUCTNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">QUANTITY</property>
+                    <property name="nativeName">QUANTITY</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">SALEPRICE</property>
+                    <property name="nativeName">SALEPRICE</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">TOTALPRICE</property>
+                    <property name="nativeName">TOTALPRICE</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">NOTE</property>
+                    <property name="nativeName">NOTE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">TOTALAMOUNT</property>
+                    <property name="nativeName">TOTALAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">TOTALAMOUNTSTRING</property>
+                    <property name="nativeName">TOTALAMOUNTSTRING</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">TOTALFEE</property>
+                    <property name="nativeName">TOTALFEE</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">TOTALPAID</property>
+                    <property name="nativeName">TOTALPAID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">TOTALADVANCE</property>
+                    <property name="nativeName">TOTALADVANCE</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">DISCOUNT</property>
+                    <property name="nativeName">DISCOUNT</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">STAFFUSERFULLNAME</property>
+                    <property name="nativeName">STAFFUSERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">CASHIERFULLNAME</property>
+                    <property name="nativeName">CASHIERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">CREATEDUSERFULLNAME</property>
+                    <property name="nativeName">CREATEDUSERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">SHIPPINGCOST</property>
+                    <property name="nativeName">SHIPPINGCOST</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">INSTALLPRODUCTID</property>
+                    <property name="nativeName">INSTALLPRODUCTID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">INSTALLPRODUCTNAME</property>
+                    <property name="nativeName">INSTALLPRODUCTNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">INSTALLIMEI</property>
+                    <property name="nativeName">INSTALLIMEI</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">INSTALLUSER</property>
+                    <property name="nativeName">INSTALLUSER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">INSTALLUSERFULLNAME</property>
+                    <property name="nativeName">INSTALLUSERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">31</property>
+                    <property name="name">CONTENT</property>
+                    <property name="nativeName">CONTENT</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">32</property>
+                    <property name="name">DELIVERYDATE</property>
+                    <property name="nativeName">DELIVERYDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">33</property>
+                    <property name="name">CREATEDDATE</property>
+                    <property name="nativeName">CREATEDDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">34</property>
+                    <property name="name">PRINTTIMES</property>
+                    <property name="nativeName">PRINTTIMES</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">35</property>
+                    <property name="name">PRINTDATE</property>
+                    <property name="nativeName">PRINTDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[call ERP.RPT_SM_SALEORDERDETAIL_REC(?,?,?)]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>Out</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>V_OUT</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-10</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>V_SALEORDERID</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>V_REPORTID</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+          <design:precision>10</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a5</property>
+            <property name="orientation">landscape</property>
+            <property name="headerHeight">1.7in</property>
+            <property name="footerHeight">0.25in</property>
+            <page-header>
+                <grid id="4">
+                    <column id="5">
+                        <property name="width">65%</property>
+                    </column>
+                    <column id="6"/>
+                    <row id="7">
+                        <cell id="8">
+                            <grid id="17">
+                                <column id="18">
+                                    <property name="width">14%</property>
+                                </column>
+                                <column id="19">
+                                    <property name="width">20%</property>
+                                </column>
+                                <column id="20">
+                                    <property name="width">7%</property>
+                                </column>
+                                <column id="21"/>
+                                <column id="22">
+                                    <property name="width">11%</property>
+                                </column>
+                                <column id="23"/>
+                                <row id="24">
+                                    <cell id="25">
+                                        <property name="colSpan">6</property>
+                                        <property name="rowSpan">1</property>
+                                        <data id="51">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">12pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="textAlign">center</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CompanyName</property>
+                                                    <expression name="expression" type="javascript">params["CompanyName"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CompanyName</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="31">
+                                    <cell id="32">
+                                        <property name="colSpan">4</property>
+                                        <property name="rowSpan">1</property>
+                                        <data id="52">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CompanyAddress</property>
+                                                    <expression name="expression" type="javascript">params["CompanyAddress"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CompanyAddress</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="36">
+                                        <label id="91">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">Website:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="37">
+                                        <data id="55">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CompanyWebsite</property>
+                                                    <expression name="expression" type="javascript">params["CompanyWebsite"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CompanyWebsite</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="38">
+                                    <cell id="39">
+                                        <label id="88">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">Điện thoại:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="40">
+                                        <data id="53">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <property name="textAlign">left</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CompanyPhone</property>
+                                                    <expression name="expression" type="javascript">params["CompanyPhone"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CompanyPhone</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="41">
+                                        <label id="89">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">Fax:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="42">
+                                        <data id="54">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CompanyFax</property>
+                                                    <expression name="expression" type="javascript">params["CompanyFax"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CompanyFax</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="43">
+                                        <label id="90">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">Email:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="44">
+                                        <data id="56">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">8.25pt</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CompanyEmail</property>
+                                                    <expression name="expression" type="javascript">params["CompanyEmail"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CompanyEmail</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                        <cell id="9">
+                            <grid id="57">
+                                <column id="58">
+                                    <property name="width">25%</property>
+                                </column>
+                                <column id="59"/>
+                                <row id="60">
+                                    <cell id="61">
+                                        <image id="414">
+                                            <property name="marginTop">3pt</property>
+                                            <property name="source">expr</property>
+                                            <property name="fitToContainer">true</property>
+                                            <expression name="valueExpr">vars["qrCode"]</expression>
+                                        </image>
+                                    </cell>
+                                    <cell id="62">
+                                        <grid id="63">
+                                            <column id="64">
+                                                <property name="width">35%</property>
+                                            </column>
+                                            <column id="65">
+                                                <property name="width">40%</property>
+                                            </column>
+                                            <column id="66">
+                                                <property name="width">30%</property>
+                                            </column>
+                                            <row id="67">
+                                                <cell id="68">
+                                                    <property name="colSpan">3</property>
+                                                    <property name="rowSpan">1</property>
+                                                    <label id="83">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">12pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <text-property name="text">PHIẾU BIÊN NHẬN</text-property>
+                                                    </label>
+                                                </cell>
+                                            </row>
+                                            <row id="71">
+                                                <cell id="72">
+                                                    <label id="92">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="textAlign">left</property>
+                                                        <text-property name="text">Ngày in:</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="73">
+                                                    <data id="84">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="dataSet">Data Set</property>
+                                                        <list-property name="boundDataColumns">
+                                                            <structure>
+                                                                <property name="name">PRINTDATE</property>
+                                                                <text-property name="displayName">PRINTDATE</text-property>
+                                                                <expression name="expression" type="javascript">dataSetRow["PRINTDATE"] == null ? "" : Formatter.format(dataSetRow["PRINTDATE"], "dd/MM/yyyy")</expression>
+                                                                <property name="dataType">string</property>
+                                                                <property name="allowExport">true</property>
+                                                            </structure>
+                                                        </list-property>
+                                                        <property name="resultSetColumn">PRINTDATE</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="74">
+                                                    <data id="85">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="dataSet">Data Set</property>
+                                                        <list-property name="boundDataColumns">
+                                                            <structure>
+                                                                <property name="name">PRINTTIMES</property>
+                                                                <text-property name="displayName">PRINTTIMES</text-property>
+                                                                <expression name="expression" type="javascript">dataSetRow["PRINTTIMES"] == null ? "": dataSetRow["PRINTTIMES"]</expression>
+                                                                <property name="dataType">decimal</property>
+                                                                <property name="allowExport">true</property>
+                                                            </structure>
+                                                        </list-property>
+                                                        <property name="resultSetColumn">PRINTTIMES</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                            <row id="75">
+                                                <cell id="76">
+                                                    <label id="93">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="textAlign">left</property>
+                                                        <text-property name="text">Ngày tạo:</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="77">
+                                                    <property name="colSpan">2</property>
+                                                    <property name="rowSpan">1</property>
+                                                    <data id="86">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="dataSet">Data Set</property>
+                                                        <list-property name="boundDataColumns">
+                                                            <structure>
+                                                                <property name="name">CREATEDDATE</property>
+                                                                <text-property name="displayName">CREATEDDATE</text-property>
+                                                                <expression name="expression" type="javascript">dataSetRow["CREATEDDATE"] == null ? "" :Formatter.format(dataSetRow["CREATEDDATE"], "dd/MM/yyyy")</expression>
+                                                                <property name="dataType">string</property>
+                                                                <property name="allowExport">true</property>
+                                                            </structure>
+                                                        </list-property>
+                                                        <property name="resultSetColumn">CREATEDDATE</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                            <row id="79">
+                                                <cell id="80">
+                                                    <label id="94">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="textAlign">left</property>
+                                                        <text-property name="text">Số phiếu:</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="81">
+                                                    <property name="colSpan">2</property>
+                                                    <property name="rowSpan">1</property>
+                                                    <data id="87">
+                                                        <property name="fontFamily">"Arial"</property>
+                                                        <property name="fontSize">8.25pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="dataSet">Data Set</property>
+                                                        <list-property name="boundDataColumns">
+                                                            <structure>
+                                                                <property name="name">SALEORDERID</property>
+                                                                <text-property name="displayName">SALEORDERID</text-property>
+                                                                <expression name="expression" type="javascript">dataSetRow["SALEORDERID"]</expression>
+                                                                <property name="dataType">string</property>
+                                                            </structure>
+                                                        </list-property>
+                                                        <property name="resultSetColumn">SALEORDERID</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                    <row id="10">
+                        <cell id="11">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <grid id="95">
+                                <column id="96">
+                                    <property name="width">15%</property>
+                                </column>
+                                <column id="97">
+                                    <property name="width">45%</property>
+                                </column>
+                                <column id="98">
+                                    <property name="width">20%</property>
+                                </column>
+                                <column id="99">
+                                    <property name="width">20%</property>
+                                </column>
+                                <row id="100">
+                                    <cell id="101">
+                                        <label id="400">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Kho xuất:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="102">
+                                        <data id="407">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">STORENAME</property>
+                                                    <text-property name="displayName">STORENAME</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["STORENAME"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">STORENAME</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="103">
+                                        <label id="404">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Hậu mãi:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="104">
+                                        <data id="411">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CREATEDUSERFULLNAME</property>
+                                                    <text-property name="displayName">CREATEDUSERFULLNAME</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["CREATEDUSERFULLNAME"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CREATEDUSERFULLNAME</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="105">
+                                    <cell id="106">
+                                        <label id="401">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Khách hàng:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="107">
+                                        <data id="408">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CUSTOMERNAME</property>
+                                                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CUSTOMERNAME</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="108">
+                                        <label id="405">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Điện thoại:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="109">
+                                        <data id="412">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CUSTOMERPHONE</property>
+                                                    <text-property name="displayName">CUSTOMERPHONE</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERPHONE"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CUSTOMERPHONE</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="110">
+                                    <cell id="111">
+                                        <label id="402">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Địa chỉ:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="112">
+                                        <data id="409">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">CUSTOMERADDRESS</property>
+                                                    <text-property name="displayName">CUSTOMERADDRESS</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERADDRESS"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">CUSTOMERADDRESS</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="113">
+                                        <label id="406">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Hình thức giao hàng:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="114">
+                                        <data id="413">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">DELIVERYTYPENAME</property>
+                                                    <text-property name="displayName">DELIVERYTYPENAME</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["DELIVERYTYPENAME"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">DELIVERYTYPENAME</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="115">
+                                    <cell id="116">
+                                        <label id="403">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Địa chỉ giao hàng:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="117">
+                                        <data id="410">
+                                            <property name="fontFamily">"Arial"</property>
+                                            <property name="fontSize">9pt</property>
+                                            <property name="dataSet">Data Set</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">DELIVERYADDRESS</property>
+                                                    <text-property name="displayName">DELIVERYADDRESS</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["DELIVERYADDRESS"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">DELIVERYADDRESS</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="118"/>
+                                    <cell id="119"/>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <label id="561">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontSize">8.25pt</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="marginTop">auto</property>
+                    <property name="marginLeft">auto</property>
+                    <property name="marginRight">auto</property>
+                    <property name="textAlign">center</property>
+                    <text-property name="text">(Quý khách nhận hàng xin vui lòng kiểm tra kỹ: Hàng giao cho khách là hàng mới 100% kèm theo Phiếu Bảo Hành đầy đủ)</text-property>
+                </label>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="415">
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">STT</property>
+                    <text-property name="displayName">STT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["STT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTID</property>
+                    <text-property name="displayName">PRODUCTID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTID"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTNAME</property>
+                    <text-property name="displayName">PRODUCTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">QUANTITY</property>
+                    <text-property name="displayName">QUANTITY</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["QUANTITY"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">SALEPRICE</property>
+                    <text-property name="displayName">SALEPRICE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SALEPRICE"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTALPRICE</property>
+                    <text-property name="displayName">TOTALPRICE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TOTALPRICE"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <column id="449">
+                <property name="width">5%</property>
+            </column>
+            <column id="450">
+                <property name="width">15%</property>
+            </column>
+            <column id="451">
+                <property name="width">30%</property>
+            </column>
+            <column id="452">
+                <property name="width">10%</property>
+            </column>
+            <column id="453">
+                <property name="width">20%</property>
+            </column>
+            <column id="454"/>
+            <header>
+                <row id="416">
+                    <cell id="417">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="418">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <text-property name="text">STT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="419">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="420">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <text-property name="text">Mã sản phẩm</text-property>
+                        </label>
+                    </cell>
+                    <cell id="421">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="422">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <text-property name="text">Tên sản phẩm</text-property>
+                        </label>
+                    </cell>
+                    <cell id="423">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="424">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <text-property name="text">Số lượng</text-property>
+                        </label>
+                    </cell>
+                    <cell id="425">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="426">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <text-property name="text">Đơn giá</text-property>
+                        </label>
+                    </cell>
+                    <cell id="427">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="428">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <text-property name="text">Thành tiền</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="429">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <cell id="430">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="431">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">STT</property>
+                        </data>
+                    </cell>
+                    <cell id="432">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="433">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <property name="resultSetColumn">PRODUCTID</property>
+                        </data>
+                    </cell>
+                    <cell id="434">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="435">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <property name="resultSetColumn">PRODUCTNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="436">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="437">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">QUANTITY</property>
+                        </data>
+                    </cell>
+                    <cell id="438">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="439">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">SALEPRICE</property>
+                        </data>
+                    </cell>
+                    <cell id="440">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="441">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">TOTALPRICE</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+        <grid id="455">
+            <column id="456">
+                <property name="width">20%</property>
+            </column>
+            <column id="457">
+                <property name="width">20%</property>
+            </column>
+            <column id="458">
+                <property name="width">20%</property>
+            </column>
+            <column id="459"/>
+            <row id="460">
+                <cell id="461">
+                    <grid id="465">
+                        <column id="466"/>
+                        <row id="467">
+                            <cell id="468">
+                                <label id="475">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">Khách hàng</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="469">
+                            <cell id="470">
+                                <label id="476">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">8.25pt</property>
+                                    <property name="fontStyle">italic</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">(Ký, ghi rõ họ tên)</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="471">
+                            <cell id="472">
+                                <label id="478">
+                                    <property name="height">0.7in</property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="473">
+                            <cell id="474">
+                                <data id="477">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CUSTOMERNAME</property>
+                                            <text-property name="displayName">CUSTOMERNAME</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CUSTOMERNAME</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+                <cell id="462">
+                    <grid id="479">
+                        <column id="480"/>
+                        <row id="481">
+                            <cell id="482">
+                                <label id="483">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">Nhân viên bán hàng</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="484">
+                            <cell id="485">
+                                <label id="486">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">8.25pt</property>
+                                    <property name="fontStyle">italic</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">(Ký, ghi rõ họ tên)</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="487">
+                            <cell id="488">
+                                <label id="489">
+                                    <property name="height">0.7in</property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="490">
+                            <cell id="491">
+                                <data id="507">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">STAFFUSERFULLNAME</property>
+                                            <text-property name="displayName">STAFFUSERFULLNAME</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["STAFFUSERFULLNAME"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">STAFFUSERFULLNAME</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+                <cell id="463">
+                    <grid id="493">
+                        <column id="494"/>
+                        <row id="495">
+                            <cell id="496">
+                                <label id="497">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">Thu ngân</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="498">
+                            <cell id="499">
+                                <label id="500">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">8.25pt</property>
+                                    <property name="fontStyle">italic</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">(Ký, ghi rõ họ tên)</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="501">
+                            <cell id="502">
+                                <label id="503">
+                                    <property name="height">0.7in</property>
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="504">
+                            <cell id="505">
+                                <data id="508">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CASHIERFULLNAME</property>
+                                            <text-property name="displayName">CASHIERFULLNAME</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CASHIERFULLNAME"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CASHIERFULLNAME</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+                <cell id="464">
+                    <grid id="509">
+                        <property name="marginLeft">30pt</property>
+                        <column id="510">
+                            <property name="width">27%</property>
+                        </column>
+                        <column id="511">
+                            <property name="width">5%</property>
+                        </column>
+                        <column id="512"/>
+                        <row id="513">
+                            <cell id="514">
+                                <label id="541">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Tổng tiền</text-property>
+                                </label>
+                            </cell>
+                            <cell id="515">
+                                <label id="547">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">:</text-property>
+                                </label>
+                            </cell>
+                            <cell id="516">
+                                <data id="553">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TOTALAMOUNT</property>
+                                            <text-property name="displayName">TOTALAMOUNT</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["TOTALAMOUNT"]</expression>
+                                            <property name="dataType">decimal</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">TOTALAMOUNT</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="517">
+                            <cell id="518">
+                                <property name="colSpan">3</property>
+                                <property name="rowSpan">1</property>
+                                <data id="554">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">8.25pt</property>
+                                    <property name="fontStyle">italic</property>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TOTALAMOUNTSTRING</property>
+                                            <text-property name="displayName">TOTALAMOUNTSTRING</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["TOTALAMOUNTSTRING"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">TOTALAMOUNTSTRING</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="521">
+                            <cell id="522">
+                                <label id="542">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Phí giao</text-property>
+                                </label>
+                            </cell>
+                            <cell id="523">
+                                <label id="548">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">:</text-property>
+                                </label>
+                            </cell>
+                            <cell id="524">
+                                <data id="555">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">SHIPPINGCOST</property>
+                                            <text-property name="displayName">SHIPPINGCOST</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["SHIPPINGCOST"]</expression>
+                                            <property name="dataType">decimal</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">SHIPPINGCOST</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="525">
+                            <cell id="526">
+                                <label id="543">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Giảm giá</text-property>
+                                </label>
+                            </cell>
+                            <cell id="527">
+                                <label id="549">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">:</text-property>
+                                </label>
+                            </cell>
+                            <cell id="528">
+                                <data id="556">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">DISCOUNT</property>
+                                            <text-property name="displayName">DISCOUNT</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["DISCOUNT"]</expression>
+                                            <property name="dataType">decimal</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">DISCOUNT</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="529">
+                            <cell id="530">
+                                <label id="544">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Đã thu</text-property>
+                                </label>
+                            </cell>
+                            <cell id="531">
+                                <label id="550">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">:</text-property>
+                                </label>
+                            </cell>
+                            <cell id="532">
+                                <data id="557">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TOTALPAID</property>
+                                            <text-property name="displayName">TOTALPAID</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["TOTALPAID"]</expression>
+                                            <property name="dataType">decimal</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">TOTALPAID</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="533">
+                            <cell id="534">
+                                <label id="545">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Trả trước</text-property>
+                                </label>
+                            </cell>
+                            <cell id="535">
+                                <label id="551">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">:</text-property>
+                                </label>
+                            </cell>
+                            <cell id="536">
+                                <data id="558">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TOTALADVANCE</property>
+                                            <text-property name="displayName">TOTALADVANCE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["TOTALADVANCE"]</expression>
+                                            <property name="dataType">decimal</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">TOTALADVANCE</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="537">
+                            <property name="borderTopStyle">dotted</property>
+                            <property name="borderTopWidth">thin</property>
+                            <cell id="538">
+                                <label id="546">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Còn lại</text-property>
+                                </label>
+                            </cell>
+                            <cell id="539">
+                                <label id="552">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">:</text-property>
+                                </label>
+                            </cell>
+                            <cell id="540">
+                                <data id="560">
+                                    <property name="fontFamily">"Arial"</property>
+                                    <property name="fontSize">9pt</property>
+                                    <structure name="numberFormat">
+                                        <property name="category">Currency</property>
+                                        <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                    </structure>
+                                    <property name="textAlign">right</property>
+                                    <property name="dataSet">Data Set</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TOTALADVANCE</property>
+                                            <text-property name="displayName">TOTALLIQUIDATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["TOTALADVANCE"] - dataSetRow["TOTALADVANCE"] - dataSetRow["DISCOUNT"] - dataSetRow["TOTALPAID"] + dataSetRow["SHIPPINGCOST"]</expression>
+                                            <property name="dataType">decimal</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">TOTALADVANCE</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="qrCode">
+            <expression name="value" type="javascript">importPackage(Packages.com.google.qrcodegenerator);&#13;
+&#13;
+vars["qrCode"] =  QRCodeGenerator.getQRCodeImage(params["SaleOrderId"].value, 254, 254);</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

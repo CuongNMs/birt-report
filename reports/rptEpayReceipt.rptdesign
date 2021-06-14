@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">86</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">86</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">86</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="CompanyName" id="4">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyPhone" id="5">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompanyWebsite" id="6">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OutputReceiptId" id="87">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SaleOrderId" id="88">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="85">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@10.30.1.36:1521:vtdbtest</property>
+            <property name="odaUser">ERP</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Q3Zzc3NxWEFjcXhxdw==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="86">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">V_OUT</property>
+                    <property name="nativeName">V_OUT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-10</property>
+                    <property name="position">1</property>
+                    <property name="allowNull">true</property>
+                    <property name="isOutput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">V_OUTPUTRECEIPTID</property>
+                    <property name="paramName">OutputReceiptId</property>
+                    <property name="nativeName">V_OUTPUTRECEIPTID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">V_SALEORDERID</property>
+                    <property name="paramName">SaleOrderId</property>
+                    <property name="nativeName">V_SALEORDERID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">COMPANYNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">STOREADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">SALEORDERID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">OUTPUTRECEIPTID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">INOUTVOUCHERID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">VOUCHERDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">RECEIPTDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CASHIERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">STAFFUSERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">INVOICENOTE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">EPAYTRANSACTIONTYPENAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">PROVIDERPRODUCTCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">PRODUCTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">EPAYTRANSACTIONID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">TRANSACTIONACCOUNT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">CUSTOMERADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">CUSTOMERPHONE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">SALEPRICE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">AMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">CREATEDUSERFULLNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">RESPONSECODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">EPAYSERVICEGROUPNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">BRANDNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">CHARGECYCLE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">BILLNOTE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">COMPANYNAME</property>
+                    <property name="nativeName">COMPANYNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">STOREADDRESS</property>
+                    <property name="nativeName">STOREADDRESS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">SALEORDERID</property>
+                    <property name="nativeName">SALEORDERID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">OUTPUTRECEIPTID</property>
+                    <property name="nativeName">OUTPUTRECEIPTID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">INOUTVOUCHERID</property>
+                    <property name="nativeName">INOUTVOUCHERID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">VOUCHERDATE</property>
+                    <property name="nativeName">VOUCHERDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">RECEIPTDATE</property>
+                    <property name="nativeName">RECEIPTDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">CASHIERFULLNAME</property>
+                    <property name="nativeName">CASHIERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">STAFFUSERFULLNAME</property>
+                    <property name="nativeName">STAFFUSERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">INVOICENOTE</property>
+                    <property name="nativeName">INVOICENOTE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">EPAYTRANSACTIONTYPENAME</property>
+                    <property name="nativeName">EPAYTRANSACTIONTYPENAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">PROVIDERPRODUCTCODE</property>
+                    <property name="nativeName">PROVIDERPRODUCTCODE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">PRODUCTNAME</property>
+                    <property name="nativeName">PRODUCTNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">EPAYTRANSACTIONID</property>
+                    <property name="nativeName">EPAYTRANSACTIONID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">TRANSACTIONACCOUNT</property>
+                    <property name="nativeName">TRANSACTIONACCOUNT</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">CUSTOMERADDRESS</property>
+                    <property name="nativeName">CUSTOMERADDRESS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">CUSTOMERPHONE</property>
+                    <property name="nativeName">CUSTOMERPHONE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">SALEPRICE</property>
+                    <property name="nativeName">SALEPRICE</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">AMOUNT</property>
+                    <property name="nativeName">AMOUNT</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">CREATEDUSERFULLNAME</property>
+                    <property name="nativeName">CREATEDUSERFULLNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">RESPONSECODE</property>
+                    <property name="nativeName">RESPONSECODE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">EPAYSERVICEGROUPNAME</property>
+                    <property name="nativeName">EPAYSERVICEGROUPNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">BRANDNAME</property>
+                    <property name="nativeName">BRANDNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">CHARGECYCLE</property>
+                    <property name="nativeName">CHARGECYCLE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">BILLNOTE</property>
+                    <property name="nativeName">BILLNOTE</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[call ERP.RPT_SM_OUTPUTRECEIPT(?,?,?) ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>Out</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>V_OUT</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-10</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>V_OUTPUTRECEIPTID</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>V_SALEORDERID</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+          <design:precision>20</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">portrait</property>
+            <property name="topMargin">0in</property>
+            <property name="leftMargin">0in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="rightMargin">0in</property>
+            <property name="height">5.905in</property>
+            <property name="width">3.937in</property>
+            <property name="headerHeight">2.15in</property>
+            <property name="footerHeight">0.5in</property>
+            <page-header>
+                <grid id="8">
+                    <column id="9"/>
+                    <row id="10">
+                        <cell id="11">
+                            <text-data id="16">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">9.75pt</property>
+                                <property name="textAlign">center</property>
+                                <expression name="valueExpr">params["CompanyName"].value</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                    <row id="12">
+                        <cell id="13">
+                            <text-data id="17">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">9pt</property>
+                                <property name="textAlign">center</property>
+                                <expression name="valueExpr">"ĐT: " + params["CompanyPhone"].value</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                    <row id="14">
+                        <cell id="15">
+                            <text-data id="18">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">9pt</property>
+                                <property name="textAlign">center</property>
+                                <expression name="valueExpr">"Website: "+ params["CompanyWebsite"].value</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                    <row id="19">
+                        <cell id="20">
+                            <label id="21">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">PHIẾU BIÊN NHẬN</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="22">
+                        <cell id="23">
+                            <data id="89">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">9pt</property>
+                                <property name="textAlign">center</property>
+                                <property name="dataSet">Data Set</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">RECEIPTDATE</property>
+                                        <text-property name="displayName">RECEIPTDATE</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["RECEIPTDATE"] == null ? "Ngày:" : "Ngày: " + Formatter.format(dataSetRow["RECEIPTDATE"], "dd/MM/yyyy")</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">RECEIPTDATE</property>
+                            </data>
+                        </cell>
+                    </row>
+                    <row id="24">
+                        <cell id="25">
+                            <data id="90">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">9pt</property>
+                                <property name="textAlign">center</property>
+                                <property name="dataSet">Data Set</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">OUTPUTRECEIPTID</property>
+                                        <text-property name="displayName">OUTPUTRECEIPTID</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["OUTPUTRECEIPTID"] == null ? "Số phiếu: " : "Số phiếu: " + dataSetRow["OUTPUTRECEIPTID"]</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">OUTPUTRECEIPTID</property>
+                            </data>
+                        </cell>
+                    </row>
+                    <row id="26">
+                        <cell id="27">
+                            <property name="textAlign">center</property>
+                            <image id="91">
+                                <property name="source">expr</property>
+                                <expression name="valueExpr">vars["qrCode"]</expression>
+                            </image>
+                        </cell>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <data id="125">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontSize">9pt</property>
+                    <property name="textAlign">justify</property>
+                    <property name="dataSet">Data Set</property>
+                    <list-property name="boundDataColumns">
+                        <structure>
+                            <property name="name">BILLNOTE</property>
+                            <text-property name="displayName">BILLNOTE</text-property>
+                            <expression name="expression" type="javascript">dataSetRow["BILLNOTE"]</expression>
+                            <property name="dataType">string</property>
+                        </structure>
+                    </list-property>
+                    <property name="resultSetColumn">BILLNOTE</property>
+                </data>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="28">
+            <property name="height">3.5625in</property>
+            <column id="29">
+                <property name="width">26%</property>
+            </column>
+            <column id="30"/>
+            <row id="31">
+                <cell id="32">
+                    <label id="70">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Khách hàng : </text-property>
+                    </label>
+                </cell>
+                <cell id="33">
+                    <data id="93">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CUSTOMERNAME</property>
+                                <text-property name="displayName">CUSTOMERNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">CUSTOMERNAME</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="34">
+                <cell id="35">
+                    <label id="71">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Địa chỉ : </text-property>
+                    </label>
+                </cell>
+                <cell id="36">
+                    <data id="94">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CUSTOMERADDRESS</property>
+                                <text-property name="displayName">CUSTOMERADDRESS</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERADDRESS"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">CUSTOMERADDRESS</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="37">
+                <cell id="38">
+                    <label id="72">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Điện thoại :</text-property>
+                    </label>
+                </cell>
+                <cell id="39">
+                    <data id="95">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CUSTOMERPHONE</property>
+                                <text-property name="displayName">CUSTOMERPHONE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERPHONE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">CUSTOMERPHONE</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="40">
+                <cell id="41">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <label id="74">
+                        <text-property name="text">------------------------------------------------------------------------------------------</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="43">
+                <cell id="44">
+                    <label id="75">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Dịch vụ :</text-property>
+                    </label>
+                </cell>
+                <cell id="45">
+                    <data id="96">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">PRODUCTNAME</property>
+                                <text-property name="displayName">PRODUCTNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRODUCTNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">PRODUCTNAME</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="46">
+                <cell id="47">
+                    <label id="76">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Nhà cung cấp :</text-property>
+                    </label>
+                </cell>
+                <cell id="48">
+                    <data id="97">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">BRANDNAME</property>
+                                <text-property name="displayName">BRANDNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["BRANDNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">BRANDNAME</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="49">
+                <cell id="50">
+                    <label id="77">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Tài khoản :</text-property>
+                    </label>
+                </cell>
+                <cell id="51">
+                    <data id="98">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TRANSACTIONACCOUNT</property>
+                                <text-property name="displayName">TRANSACTIONACCOUNT</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TRANSACTIONACCOUNT"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TRANSACTIONACCOUNT</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="52">
+                <cell id="53">
+                    <label id="78">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Số tiền thu :</text-property>
+                    </label>
+                </cell>
+                <cell id="54">
+                    <data id="99">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">9pt</property>
+                        <property name="fontWeight">bold</property>
+                        <structure name="numberFormat">
+                            <property name="category">Currency</property>
+                            <property name="pattern">###0{RoundingMode=HALF_UP}</property>
+                            <property name="locale">vi_VN</property>
+                        </structure>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">SALEPRICE</property>
+                                <text-property name="displayName">SALEPRICE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["SALEPRICE"] + "VNĐ"</expression>
+                                <property name="dataType">decimal</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">SALEPRICE</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="55">
+                <cell id="56">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <label id="92">
+                        <text-property name="text">------------------------------------------------------------------------------------------</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <grid id="100">
+            <column id="101">
+                <property name="fontFamily">"Arial"</property>
+                <property name="textAlign">center</property>
+            </column>
+            <column id="102">
+                <property name="fontFamily">"Arial"</property>
+                <property name="textAlign">center</property>
+            </column>
+            <row id="103">
+                <cell id="104">
+                    <label id="115">
+                        <property name="fontSize">9pt</property>
+                        <text-property name="text">Khách hàng</text-property>
+                    </label>
+                </cell>
+                <cell id="105">
+                    <label id="116">
+                        <property name="fontSize">9pt</property>
+                        <text-property name="text">Thu ngân</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="106">
+                <cell id="107">
+                    <label id="117">
+                        <property name="fontSize">9pt</property>
+                        <text-property name="text">(Ký, ghi rõ họ tên)</text-property>
+                    </label>
+                </cell>
+                <cell id="108">
+                    <label id="118">
+                        <property name="fontSize">9pt</property>
+                        <text-property name="text">(Ký, ghi rõ họ tên)</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="109">
+                <property name="height">1in</property>
+                <cell id="110">
+                    <label id="119"/>
+                </cell>
+                <cell id="111">
+                    <label id="120"/>
+                </cell>
+            </row>
+            <row id="112">
+                <cell id="113">
+                    <data id="121">
+                        <property name="fontSize">8.25pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CUSTOMERNAME</property>
+                                <text-property name="displayName">CUSTOMERNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">CUSTOMERNAME</property>
+                    </data>
+                </cell>
+                <cell id="114">
+                    <data id="122">
+                        <property name="fontSize">8.25pt</property>
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">STAFFUSERFULLNAME</property>
+                                <text-property name="displayName">STAFFUSERFULLNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["STAFFUSERFULLNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">STAFFUSERFULLNAME</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="qrCode">
+            <expression name="value" type="javascript">importPackage(Packages.com.google.qrcodegenerator);&#13;
+vars["qrCode"] =  QRCodeGenerator.getQRCodeImage(params["OutputReceiptId"].value, 100,100);</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>
